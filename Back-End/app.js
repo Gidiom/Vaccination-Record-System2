@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const route = require("./api/route/patient");
 const route2 = require("./api/route/staff");
+const dotenv = require("dotenv");
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.set("port", 3000);
 // body parser ... necessary for post method
 app.use(express.urlencoded({extended:false}));
 app.use(express.json({extended:false}));
-
+dotenv.config();
 
 // logging the requests method and url
 app.use(function (req, res, next) {
