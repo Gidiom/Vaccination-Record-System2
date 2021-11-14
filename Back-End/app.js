@@ -1,7 +1,8 @@
 require("./api/database/databaseConnection");
 const express = require("express");
 const path = require("path");
-const route = require("./api/route");
+const route = require("./api/route/patient");
+const route2 = require("./api/route/staff");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(function (req, res, next) {
     next()
 })
 app.use("/",route);
+app.use("/staff", route2);
 
 var server = app.listen(app.get("port"),function(){
     var port = server.address().port;
