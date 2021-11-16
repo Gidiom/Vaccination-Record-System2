@@ -35,7 +35,7 @@ const patientSchema = new mongoose.Schema({
         required:true
     },
     age:Number,
-    dateOfBirth: Date,
+    dateOfBirth: String,
     address:addressSchema,
     vaccinationType: String,
     status: Boolean
