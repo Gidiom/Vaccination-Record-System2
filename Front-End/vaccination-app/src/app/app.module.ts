@@ -4,6 +4,7 @@ import { HomeComponent } from './Header/header.component';
 import { FooterComponent } from './Footer/footer.component';
 // import { PatientComponent } from './shared/patient.component';
 import { SignupComponent } from './register/signup/signup.component';
+import { LoginComponent } from './register/signin/login.component';
 import { PatientComponent } from './patient/patient.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -17,8 +18,9 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     HomeComponent,
     FooterComponent,
-    SignupComponent
-    // PatientComponent
+    SignupComponent,
+    LoginComponent
+
   ],
   imports: [
     BrowserModule,

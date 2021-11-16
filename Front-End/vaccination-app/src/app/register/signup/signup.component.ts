@@ -13,9 +13,9 @@ import { Router } from '@angular/router';
   styleUrls: []
 })
 export class SignupComponent implements OnInit {
-  signupForm: FormGroup;
+  myForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private myService: ConfigService, private authService: AuthService, private router: Router) {
-    this.signupForm = formBuilder.group({
+    this.myForm = formBuilder.group({
       'fullname': ['', [Validators.required, Validators.pattern("[a-zA-Z][a-zA-Z ]{0,}")]],
       'username': ['', [Validators.required, Validators.pattern("^[a-z0-9]+(?:[_.-][a-z0-9]+)*$")]],
       'phonenumber': ['', { validators: [Validators.required, Validators.pattern("[- +()0-9]{6,}")], updateOn: "blur" }],
@@ -27,11 +27,11 @@ export class SignupComponent implements OnInit {
 
   onSignup() {
     const user = {
-      fullname: this.signupForm.value.fullname,
-      username: this.signupForm.value.username,
-      phonenumber: this.signupForm.value.phonenumber,
-      email: this.signupForm.value.email,
-      password: this.signupForm.value.password,
+      fullname: this.myForm.value.fullname,
+      username: this.myForm.value.username,
+      phonenumber: this.myForm.value.phonenumber,
+      email: this.myForm.value.email,
+      password: this.myForm.value.password,
     };
 
     //registeruser
