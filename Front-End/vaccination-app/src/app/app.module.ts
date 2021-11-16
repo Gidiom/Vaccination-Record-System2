@@ -1,28 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Header/header.component';
 import { FooterComponent } from './Footer/footer.component';
 // import { PatientComponent } from './shared/patient.component';
-import { SignUpComponent } from './sign-up.component';
+import { SignupComponent } from './signup/signup.component';
 import { PatientComponent } from './patient/patient.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { RegisterComponent } from './register/register.component';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent
-    // SignUpComponent,
+    FooterComponent,
+    SignupComponent,
+    RegisterComponent
     // PatientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
     // RouterModule.forChild([
     //   { path: '', component: PatientComponent}
     // ])

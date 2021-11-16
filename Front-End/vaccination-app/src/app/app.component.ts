@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   template: `
   <app-home></app-home>
    <router-outlet></router-outlet>
+   <h1>Create New Staff</h1>
+   <app-signup></app-signup>
+   <h1>Create New Patient</h1>
+   <app-register></app-register>
    <app-footer></app-footer>
   `,
   styles: []
