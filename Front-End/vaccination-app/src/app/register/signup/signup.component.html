@@ -1,4 +1,58 @@
-<form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+       <div class="form-header">
+              <h1 id="title" class="title">Sign Up</h1>
+              <p class="sub-title">Please fill in this form to create an account</p>
+       </div>
+
+       <div class="form-group">
+              <label for="username">Fullname</label>
+              <input type="text" class="form-control" id="fullname" formControlName="fullname">
+              <div *ngIf="!myForm.get('fullname')?.valid">
+                     Invalid Fullname
+              </div>
+       </div>
+       <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" formControlName="username">
+              <div *ngIf="!myForm.get('username')?.valid">
+                     Invalid Username
+              </div>
+       </div>
+       <div class="form-group">
+              <label for="email">E-Mail</label>
+              <input type="text" class="form-control" id="email" formControlName="email">
+              <div *ngIf="!myForm.get('email')?.valid">
+                     Invalid Email
+              </div>
+       </div>
+
+       <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" formControlName="password">
+       </div>
+       <div class="form-group">
+              <label for="username">Phone Number</label>
+              <input type="Number" class="form-control" id="phonenumber" formControlName="phonenumberusername">
+              <div *ngIf="!myForm.get('phonenumber')?.valid">
+                     Invalid Username
+              </div>
+       </div>
+
+
+       <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Register</button>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+<!-- <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
        <nb-card class="form-cart">
               <nb-card-body class="example-items-col items">
                      <div class="form-header">
@@ -60,4 +114,4 @@
                      </section>
               </nb-card-body>
        </nb-card>
-</form>
+</form> -->

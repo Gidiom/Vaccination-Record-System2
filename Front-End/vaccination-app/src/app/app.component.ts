@@ -3,17 +3,14 @@ import { Component } from '@angular/core';
 // <app-footer></app-footer>
 @Component({
   selector: 'app-root',
-<<<<<<< HEAD
   template: `
   <app-home></app-home>
    <router-outlet></router-outlet>
+   <signup></signup>
    <app-footer></app-footer>
   `,
-  styles: []
-=======
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
->>>>>>> 5f06a21b (commit working registration)
+  styles: ['./app.component.css']
+
 })
 export class AppComponent {
   title = 'vaccination-app';
