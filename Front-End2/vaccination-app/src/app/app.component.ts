@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   template: `
   <app-home></app-home>
    <router-outlet></router-outlet>
-   
-   
    <app-footer></app-footer>
   `,
   // <h1>Create New Staff</h1>
